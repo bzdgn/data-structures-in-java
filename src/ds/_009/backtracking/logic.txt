@@ -1,0 +1,32 @@
+00	01	02	03	04	05	06	07			0
+08	09	10	11	12	13	14	15			1
+16	17	18	19	20	21	22	23			2
+24	25	26	27	28	29	30	31			3
+32	33	34	35	36	37	38	39			4
+40	41	42	43	44	45	46	47			5
+48	49	50	51	52	53	54	55			6
+56	57	58	59	60	61	62	63			7
+
+
+-9		-> ust sol capraz
+-8		-> ust
+-7		-> ust sag capraz
+
++7		-> alt sol capraz
++8		-> alt
++9		-> alt sag capraz
+
+0 =< x < 64			ust ve altta ise yarar.
+					ust/alt caprazlarda da ise yarar
+					
+.
+
+
+lineNum = (int)(x/8)
+startOfLine = lineNum*8
+endOfLine = (lineNum+1)*8-1
+
+x/8 ==> hangi satirdasin
+
+startOfRow = x%8;
+endOfRow = x%8 + 7*8;

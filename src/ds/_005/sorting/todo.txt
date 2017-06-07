@@ -1,0 +1,4 @@
+1- Insertion Sort Linked List to be implemented and demonstrated
+2- Traditional array insertion sort should be demonstrated with two arrays
+	(space complexity will be doubled but same time complexity)
+3- Insertion sort with two stacks or queues
