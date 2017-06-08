@@ -1,11 +1,11 @@
-package ds_004_stacks_and_queues;
+package ds_010_trees;
 
-public class Stack<T> {
+public class SStack<T> {
 	
 	private final Node<T> TOP;
 	private int size;
 	
-	public Stack(){
+	public SStack(){
 		TOP = new Node<>(null, null); 
 		size = 0;
 	}
