@@ -16,6 +16,10 @@ public class BinaryTreeDemo {
 		
 		isFound = tree.find(20);
 		System.out.println("20 exist? : " + isFound);
+		
+		int height = tree.height();
+		
+		System.out.println("Height of the tree: " + height);
 	}
 
 }

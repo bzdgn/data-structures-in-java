@@ -73,13 +73,21 @@ public class BinaryTree<T extends Comparable<T>> {
 		}
 	}
 	
-	public void remove(T data) {
-		;
+	public void remove(T data) throws Exception {
+		throw new UnsupportedOperationException("To be implemented");
 	}
 	
-//	private BinaryNode<T> find(T data) {
-//		;
-//	}
+	public int height() {
+		return height(root);
+	}
+	
+	private int height(BinaryNode<T> node) {
+		if(node == null) {
+			return -1;		// height is number of layers - 1
+		}
+		
+		return Integer.max(height(node.left), height(node.right)) + 1;
+	}
 	
 	// trivial
 	public int size() {
