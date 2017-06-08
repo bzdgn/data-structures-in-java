@@ -1,0 +1,17 @@
+Tree Terminology
+****************
+Lowest Common Ancestor: The first and closest ancestor shared by two nodes
+Descendant: Any node below another node
+Leaf: A node with no children
+Internal Node: A node with at least one child
+Level: The distance from a node to the root
+Height: The longest distance from a node to a leaf
+Node Degree: The number of children the node has
+Tree Degree: The largest node degree
+Ordered tree: The nodes positioned in order
+Full tree: Nodes have either no children or as many as they could have
+Complete tree: Every level is full except possibly for the bottom level 
+               where all leaf nodes are pushed to the left
+Perfect tree: A full tree with all leaf nodes at the same level,
+              All nodes having maximum children except the leaf nodes
+

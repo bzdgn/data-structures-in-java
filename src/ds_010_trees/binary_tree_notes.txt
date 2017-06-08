@@ -1,0 +1,61 @@
+Binary Tree Properties
+**********************
+
+Branches = Nodes - 1
+====================
+
+          10
+         /  \
+        /    \
+       5      15
+      / \
+     3   6
+     
+Nodes: 10, 5, 3, 6, 15
+
+# of Nodes   : 5
+# of Branches: 4
+
+
+Perfect Binary Tree N = 2^(H+1) - 1
+===================================
+Number of nodes = (2^(height+1)) - 1
+
+Example: Height = 3 ==> # of Nodes = 2^4 - 1 = 15
+
+
+Perfect Binary Tree Height = Log_2(Nodes + 1) - 1
+=================================================
+# of Nodes = 15
+
+Tree Height = Log_2(15 + 1) - 1 = Log_2(16) - 1 = 4 - 1 = 3
+
+
+Perfect Binary Tree Leaf Nodes = 2^Height
+=========================================
+# of Leaf Nodes = 2^H
+
+For a Perfect Binary Tree of Height = 3 ==> # Of Leaf Nodes = 2^3 = 8
+
+
+Perfect Binary Tree Internal Nodes = 2^Height - 1
+=================================================
+# of Leaf Nodes = (2^Height) - 1
+
+For a Perfect Binary Tree of Height = 3 ==> # Of Internal Nodes = (2^3) - 1 = 8 - 1 = 7
+
+
+Binary Tree Approximations;
+***************************
+    - A tree containing N nodes has O(LogN) height
+    - A tree of height H contains O(2^H) nodes
+    - The nodes are roughly half leaves and half internal (ideally)
+    - Number of Missing branches of a tree is one more of the number of nodes
+        # of Missing Branches = # of Nodes + 1
+    - Leaf Nodes = (Nodes of Degree 2) + 1, which means if you have Y number of
+        nodes that have two children, then you will have (Y+1) number of Leaf Nodes
+        Let's call;
+            Number of leaf nodes = N_0,
+            Number of nodes that have two children = N_2, then;
+        N_0 = N_2 + 1
+    -
