@@ -60,6 +60,7 @@ public class NaryTreeTraversalDemo {
 		printPreOrder(root);		// first data
 		printPostOrder(root);		// first children
 		printInOrder(root);			// children-first-half data children-second-half
+		printBreadthFirst(root);	// breadth-first level order
 	}
 	
 	/*
@@ -135,6 +136,30 @@ public class NaryTreeTraversalDemo {
 		for(int i = len; i < node.size; i++) {
 			InOrderTraversal(node.children[i]);
 		}
+	}
+	
+	/*
+	 * Breadth-First Traversal
+	 */
+	private static <T extends Comparable<T>> void printBreadthFirst(NaryNode<T> root) {
+		System.out.print("Tree BreadthFirst          : ");
+		
+		SQueue<NaryNode<T>> queue = new SQueue<>();
+		
+		queue.enqueue(root);
+		
+		while(!queue.isEmpty()) {
+			NaryNode<T> curr = queue.dequeue();
+			System.out.printf("%4s ", curr.data);
+			
+			if(curr.size != 0) {
+				for(int i = 0; i < curr.size; i++) {
+					queue.enqueue(curr.children[i]);
+				}
+			}
+		}
+		
+		System.out.print("\n");
 	}
 
 }

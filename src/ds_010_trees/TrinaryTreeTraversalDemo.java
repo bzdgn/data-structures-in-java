@@ -21,31 +21,31 @@ public class TrinaryTreeTraversalDemo {
 		 */
 		
 		// Level 0
-		TrinaryNode<Integer> root = new TrinaryNode(100);
+		TrinaryNode<Integer> root = new TrinaryNode<>(100);
 		
 		// Level 1
-		root.left	= new TrinaryNode(30);
-		root.middle	= new TrinaryNode(60);
-		root.right	= new TrinaryNode(90);
+		root.left	= new TrinaryNode<>(30);
+		root.middle	= new TrinaryNode<>(60);
+		root.right	= new TrinaryNode<>(90);
 		
 		// Level 2
-		root.left.left		= new TrinaryNode(12);
-		root.left.middle	= new TrinaryNode(17);
-		root.left.right		= new TrinaryNode(28);
+		root.left.left		= new TrinaryNode<>(12);
+		root.left.middle	= new TrinaryNode<>(17);
+		root.left.right		= new TrinaryNode<>(28);
 		
-		root.middle.left	= new TrinaryNode(35);
-		root.middle.middle	= new TrinaryNode(39);
-		root.middle.right	= new TrinaryNode(55);
+		root.middle.left	= new TrinaryNode<>(35);
+		root.middle.middle	= new TrinaryNode<>(39);
+		root.middle.right	= new TrinaryNode<>(55);
 		
-		root.right.left		= new TrinaryNode(67);
-		root.right.middle	= new TrinaryNode(88);
-		root.right.right	= new TrinaryNode(89);
+		root.right.left		= new TrinaryNode<>(67);
+		root.right.middle	= new TrinaryNode<>(88);
+		root.right.right	= new TrinaryNode<>(89);
 		
 		// Level 2
-		root.left.left.left		= new TrinaryNode(3);
-		root.left.left.right	= new TrinaryNode(9);
+		root.left.left.left		= new TrinaryNode<>(3);
+		root.left.left.right	= new TrinaryNode<>(9);
 		
-		root.middle.right.right	= new TrinaryNode(52);
+		root.middle.right.right	= new TrinaryNode<>(52);
 		
 		
 		
@@ -53,6 +53,7 @@ public class TrinaryTreeTraversalDemo {
 		printPostOrder(root);		// first children
 		printInOrderMiddleFirst(root);	// left-middle-DATA-right
 		printInOrderMiddleLast(root);	// left-DATA-middle-right
+		printBreadthFirst(root);		// breadth-first level order
 	}
 	
 	/*
@@ -135,6 +136,36 @@ public class TrinaryTreeTraversalDemo {
 		System.out.printf("%3s ", node.data);
 		InOrderTraversalMiddleLast(node.middle);
 		InOrderTraversalMiddleLast(node.right);
+	}
+	
+	/*
+	 * Breadth-First Traversal
+	 */
+	private static <T> void printBreadthFirst(TrinaryNode<T> root) {
+		System.out.print("Tree BreadthFirst          : ");
+		
+		SQueue<TrinaryNode<T>> queue = new SQueue<>();
+		
+		queue.enqueue(root);
+		
+		while(!queue.isEmpty()) {
+			TrinaryNode<T> curr = queue.dequeue();
+			System.out.printf("%3s ", curr.data);
+			
+			if(curr.left != null) {
+				queue.enqueue(curr.left);
+			}
+			
+			if(curr.middle != null) {
+				queue.enqueue(curr.middle);
+			}
+			
+			if(curr.right != null) {
+				queue.enqueue(curr.right);
+			}
+		}
+		
+		System.out.print("\n");
 	}
 
 }
