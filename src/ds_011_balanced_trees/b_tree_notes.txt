@@ -1,0 +1,40 @@
+Tree Terminology
+****************
+- Nodes are called Buckets
+- For a tree of order K:
+    Buckets hold at least K values
+    Buckets hold at most 2xK values
+    A bucket with M values has (M+1) branches
+    All leaves are at the same level
+
+Order 2 B-Tree
+**************
+                [ 11     |     25     |     -     |     -     ]
+           _____|   |    |            |   
+           |             |            |
+   [11|25|-|-]   [11|25|16|18]   [32|37|-|-]
+   
+Size of a Bucket
+****************
+2 x K x [value size] + (2 x K + 1) x [branch size]
+
+Example Bucket Size
+*******************
+Value Size	= 80 byte
+Branch Size	= 8 byte
+
+Bucket Size = 2 x K x 80 + (2 x K + 1) x 8
+            = 160 x K + 16 x K + 8
+            = 176 x K + 8
+
+If we want to fit this size to 4 KB = 4096 bytes
+
+176 x K + 8 = 4096
+176 x K = 4088
+K = (4096 - 8)/176 = 23.23
+
+Order = 23
+Height = O(Log_24N)
+One Level    : 46 values
+Two Levels   : 46^2 = 2116 values 
+Three Levels : 46^3 = 97336 values 
