@@ -1,6 +1,6 @@
 package ds_011_balanced_trees;
 
-public class BTreeNodeDemo {
+public class BasicBTreeNodeSearchDemo {
 
 	public static void main(String[] args) {
 		BTreeNode<Integer> root = prepareRoot();
@@ -42,27 +42,5 @@ public class BTreeNodeDemo {
 		
 		return root;
 	}
-	
-//	private static BTreeNode<Integer> find(BTreeNode<Integer> node, Integer value) {
-//		int i = 0;
-//		for(; i < node.size; i++) {
-////			System.out.printf("\t\tValue: %s, Node_Value: %s\n", value, node.values[i]);
-//			if(value.equals((Integer)node.values[i])) {
-//				return node;
-//			}
-//			
-//			if(value.compareTo(node.values[i]) < 0) {
-//				return find(node.branches[i], value);
-//			}
-//		}
-//		
-//		if(i == node.size) {
-//			BTreeNode<Integer> next = node.branches[node.size];
-//			return find(next, value);
-////			return find(branches[size], value);
-//		}
-//		
-//		return null;
-//	}
 
 }
