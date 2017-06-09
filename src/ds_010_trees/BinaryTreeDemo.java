@@ -20,6 +20,10 @@ public class BinaryTreeDemo {
 		int height = tree.height();
 		
 		System.out.println("Height of the tree: " + height);
+		
+		tree.print();
+		tree.remove(10);
+		tree.print();
 	}
 
 }

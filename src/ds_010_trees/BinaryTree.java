@@ -73,8 +73,107 @@ public class BinaryTree<T extends Comparable<T>> {
 		}
 	}
 	
-	public void remove(T data) throws Exception {
-		throw new UnsupportedOperationException("To be implemented");
+	public boolean remove(T data) {
+		if(isEmpty()) {
+			return false;
+		}
+		
+		if(root.data.equals(data) && size == 1) {
+			root = null;
+			size--;
+			
+			return true;
+		}
+		
+		/*
+		 * From this point the height of the tree > 0
+		 * and also it is guaranteed that we won' remove
+		 * root so every removed object will have a parent
+		 * The parent is guaranteed not to be null
+		 * 
+		 * Cases;
+		 *    1 - If node is a leaf, just remove
+		 *    2 - If node has only a one child, replace it with its child
+		 *    3 - If node has two children;
+		 *        a - If left child hasn't right-child, replace the node with its left child
+		 *        b - If left child has a right-child, find the right-most child of the
+		 *            left sub-tree and replace it with the node
+		 */
+		return remove(root, data);
+	}
+	
+	private boolean remove(BinaryNode<T> node, T data) {
+		BinaryNode<T> parent		= null;
+		BinaryNode<T> removed		= root;
+		Boolean isLeftChildOfParent	= null;
+		
+		while(removed != null) {
+			if(data.compareTo(removed.data) < 0) {
+				parent = removed;
+				removed = removed.left;
+				isLeftChildOfParent = true;
+			} else if(data.compareTo(removed.data) > 0 ) {
+				parent = removed;
+				removed = removed.right;
+				isLeftChildOfParent = false;
+			} else {
+				delete(parent, removed, isLeftChildOfParent);
+				size--;
+				
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	public void delete(BinaryNode<T> parent, BinaryNode<T> removed, Boolean isLeftChildOfParent) {
+		BinaryNode<T> replaced = null;
+		
+		if(removed.left == null && removed.right == null) {
+			// case 1: removed is a leaf
+			replaced = null;
+		} else if(removed.left == null || removed.right == null) {
+			// case 2: removed has only one child
+			if(removed.left != null) {
+				replaced = removed.left;
+			} else {
+				replaced = removed.right;
+			}
+		} else {
+			// case 3: removed has two children
+			if(removed.left.right == null) {
+				// case 3-a: removed has a left child with no right child
+				replaced = removed.left;
+				replaced.right = removed.right;
+			} else {
+				// case 3-b: removed has a left child right child
+				BinaryNode<T> parentOfRightMost	= removed.left;
+				BinaryNode<T> rightMost			= removed.left.right;
+				while(rightMost.right != null) {
+					parentOfRightMost = rightMost;
+					rightMost = rightMost.right;
+				}
+				
+				parentOfRightMost.right = rightMost.left;
+				
+				rightMost.left	= removed.left;
+				rightMost.right	= removed.right;
+				
+				replaced = rightMost;
+			}
+		}
+		
+		if(parent == null && isLeftChildOfParent == null) {
+			root = replaced;
+		} else {
+			if(isLeftChildOfParent) {
+				parent.left = replaced;
+			} else {
+				parent.right = replaced;
+			}
+		}
+
 	}
 	
 	public int height() {
