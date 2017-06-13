@@ -1,0 +1,64 @@
+TERMINOLOGY
+***********
+Network / Graph         A set of nodes connected by links
+Node / Vertex           A spot in a network
+Link / Edge             Connects nodes, can be either directed or indirected
+Path                    A sequence of nodes and links
+Cycle / Loop            A path that returns to its starting point
+Reachable               B is reachable from A if there is a path from A to B
+Connected               Nodes A and B are connected if B is reachable from A and vice versa
+Undirected              A graph is connected if every node is connected to every other node
+Strongly Connected      If every node in a graph is reachable from every other node
+Weakly Connected        A directed network becomes connected when you replace its links with undirected links
+Adjacent                Nodes are connected by a link
+Neighbor                An adjacent node
+
+Example;
+
+A ---- 75 ----> B
+
+Node A and Node B are connected by a link so they are adjacent nodes.
+Node B is Node A's neighbor because there is a directed link from Node A
+to Node B however, Node A is not neighbor of Node B because there is not a
+backward directed link from Node B to Node A. If the graph was undirected,
+then both Nodes would be neighbors of each other.
+
+Degree                 In an undirected network, he number of links a node has is called Degree.
+In-Degree              In a directed network, the number of links entering a node is called In-Degree.
+Out-Degree             Same as In-Degree but Out-Degree is the number of links leaving the node.
+
+
+NETWORK REPRESENTATION
+**********************
+You can save network in a text file in order to reuse it. Check out following directed graph;
+
+      A
+     / \
+    /   \
+  10     15
+  /        \
+|/_        _\|
+
+B --- 12 --> C
+ \          /
+  \        /
+  16     13
+    \   /
+    _\|/_
+      D
+
+To save it to a text file, you can use following format;
+
+nodeLabel, toNode#1, cost#1, toNode#2, cost#2,... toNode#N, cost#N
+
+So, the text representation will be as follows;
+
+A, B, 10, C, 15
+B, C, 12, D, 16
+C, D, 13
+D
+
+Other Representations;
+**********************
+XML
+JSON
