@@ -1,0 +1,135 @@
+RIGHT ROTATION
+**************
+      B                 A
+     / \               / \
+    A   Z     ==>     /   B
+   / \               /   / \
+  /   Y             X   Y   Z
+ X
+ 
+Old Tree's Height Difference: 2
+New Tree's Height Difference: 0
+
+1) Right Child of the Root's Left Child becomes Left Child of Root
+2) New Root is the Root's Left Child
+3) Old root becomes right child of the new root
+
+Example;
+
+       60
+      /  \
+     40   80
+    /  \
+   20   50
+  /  \
+ 10   30
+ 
+a) right child of the root's left child becomes root's left child
+
+           60
+           | \
+     40    |  80
+    /  \   |
+   20      50
+  /  \
+ 10   30
+ 
+b-c)
+
+      40
+     /  \
+   20    60
+  /  \   / \
+ 10  30 50  80
+
+Right Rotation for Left Heavy Example 
+*************************************
+
+          7
+         / \
+        /   \
+       5     9
+      / \
+     /   \
+    3     6
+   / \
+  /   \
+ 1     4
+
+
+         5
+       /   \
+      /     \
+    3         7
+   / \       / \
+  /   \     /   \
+ 1     4   6     9
+
+
+
+LEFT ROTATION
+*************
+     A                     B
+    / \                   / \
+   X   B        =>       A   \
+      / \               / \   \
+     Y   \             X   Y   Z
+          Z
+
+Old Tree's Height Difference: 2
+New Tree's Height Difference: 0
+
+1) Left Child of the Root's Right Child becomes Right Child of Root
+2) New Root is the Root's Right Child
+3) Old root becomes left child of the new root
+
+Example;
+
+       20
+      /  \
+     10   40
+         /  \
+        30   60
+            /  \
+           50   80
+ 
+a) right child of the root's left child becomes root's left child
+
+    20
+   / | 
+  10 |     40
+     |    /  \
+     30      60
+            /  \
+           50   80
+ 
+b-c)
+
+      40
+     /  \
+   20    60
+  /  \   / \
+ 10  30 50  80
+ 
+Right Rotation for Left Heavy Example 
+*************************************
+
+          3
+         / \
+        /   \
+       1     5
+            / \ 
+           /   \
+          4     7
+               / \
+              /   \
+             6     9
+
+
+         5
+       /   \
+      /     \
+    3         7
+   / \       / \
+  /   \     /   \
+ 1     4   6     9
