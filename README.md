@@ -1,5 +1,5 @@
-#Data Structures In Java
-************************
+# Data Structures In Java
+*************************
 
 1. [Intro: Package: ds_001_intro](src/ds_001_intro)
 	1. [Find Primes](src/ds_001_intro/FindPrimes.java)
