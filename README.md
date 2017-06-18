@@ -16,7 +16,7 @@
 	12. [Trapezoid Rule Demo 2](src/ds_001_intro/TrapezoidRuleAlgoDemoV2.java)
 	13. [Trapezoid Rule Demo 3](src/ds_001_intro/TrapezoidRuleAlgoDemoV3.java)
 
-2. [Intro](src/ds_002_linkedlists)
+2. [Linked Lists](src/ds_002_linkedlists)
 	1. [Linked List](src/ds_002_linkedlists/LinkedList.java)
 	2. [Linked List Demo](src/ds_002_linkedlists/LinkedListDemo.java)
 	3. [Doubly Linked List](src/ds_002_linkedlists/DoublyLinkedList.java)
