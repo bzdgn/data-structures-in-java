@@ -1,12 +1,13 @@
-Data Structures In Java
-***********************
+#Data Structures In Java
+************************
 
-- [Intro](src/ds_001_intro)
--- [Curve](src/ds_001_intro/Curve.java)
+1. [Intro](src/ds_001_intro)
+	1. [Curve](src/ds_001_intro/Curve.java)
 
 *******
-ToDo's:
-*******
+
+## ToDo's:
+*********
 - Appendix will be created in this Readme file
 - DS_011 Package: BTree implementation will be completed
 - DS_011 Package: AVLTree implementation will be completed
