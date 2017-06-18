@@ -1,7 +1,7 @@
 #Data Structures In Java
 ************************
 
-1. [Intro](src/ds_001_intro)
+1. [Intro: Package: ds_001_intro](src/ds_001_intro)
 	1. [Find Primes](src/ds_001_intro/FindPrimes.java)
 	2. [Greatest Common Divisor](src/ds_001_intro/GCD.java)
 	3. [Least Common Multiple](src/ds_001_intro/LCM.java)
@@ -16,7 +16,7 @@
 	12. [Trapezoid Rule Demo 2](src/ds_001_intro/TrapezoidRuleAlgoDemoV2.java)
 	13. [Trapezoid Rule Demo 3](src/ds_001_intro/TrapezoidRuleAlgoDemoV3.java)
 
-2. [Linked Lists](src/ds_002_linkedlists)
+2. [Linked Lists: Package: ds_002_linkedlists](src/ds_002_linkedlists)
 	1. [Cell](src/ds_002_linkedlists/Cell.java)
 	2. [Doubly Cell](src/ds_002_linkedlists/DCell.java)
 	3. [Linked List](src/ds_002_linkedlists/LinkedList.java)
