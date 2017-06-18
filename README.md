@@ -1,3 +1,10 @@
+Data Structures In Java
+***********************
+
+- [Intro](src/ds_001_intro)
+-- [Curve](src/ds_001_intro/Curve.java)
+
+*******
 ToDo's:
 *******
 - Appendix will be created in this Readme file
@@ -8,7 +15,3 @@ ToDo's:
 - DS_013 Package: Breadth-First Wave to be implemented
 - DS_013 Package: Prim's algorithm to be implemented
 - DS_013 Package: Kruskal's algorithm to be implemented
-
-
-[Intro](src/ds_001_intro)
-[Curve](src/ds_001_intro/Curve.java)
