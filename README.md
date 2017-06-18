@@ -29,7 +29,7 @@
 *******
 
 ## ToDo's:
-*********
+
 - Appendix will be created in this Readme file
 - DS_011 Package: BTree implementation will be completed
 - DS_011 Package: AVLTree implementation will be completed
