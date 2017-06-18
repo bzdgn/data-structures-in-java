@@ -13,8 +13,17 @@
 	9. [Rectangle Rule Demo](src/ds_001_intro/RectangleRuleAlgoDemo.java)
 	10. [Rectangle Rule Demo 2](src/ds_001_intro/RectangleRuleAlgoDemoV2.java)
 	11. [Trapezoid Rule Demo](src/ds_001_intro/TrapezoidRuleAlgoDemo.java)
-	12. [Trapezoid Rule Demo](src/ds_001_intro/TrapezoidRuleAlgoDemoV2.java)
-	13. [Trapezoid Rule Demo](src/ds_001_intro/TrapezoidRuleAlgoDemoV3.java)
+	12. [Trapezoid Rule Demo 2](src/ds_001_intro/TrapezoidRuleAlgoDemoV2.java)
+	13. [Trapezoid Rule Demo 3](src/ds_001_intro/TrapezoidRuleAlgoDemoV3.java)
+
+2. [Intro](src/ds_002_linkedlists)
+	1. [Linked List](src/ds_002_linkedlists/LinkedList.java)
+	2. [Linked List Demo](src/ds_002_linkedlists/LinkedListDemo.java)
+	3. [Doubly Linked List](src/ds_002_linkedlists/DoublyLinkedList.java)
+	4. [Doubly Linked List Demo](src/ds_002_linkedlists/DoublyLinkedListDemo.java)
+	5. [Sorted Linked List](src/ds_002_linkedlists/SortedLinkedList.java)
+	6. [Sorted Linked List Demo](src/ds_002_linkedlists/SortedLinkedListDemo.java)
+	7. [Sorting Items With Sorted Linked List Demo](src/ds_002_linkedlists/SortingItemsWithSortedLinkedListDemo.java)
 
 *******
 
