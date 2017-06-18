@@ -17,13 +17,15 @@
 	13. [Trapezoid Rule Demo 3](src/ds_001_intro/TrapezoidRuleAlgoDemoV3.java)
 
 2. [Linked Lists](src/ds_002_linkedlists)
-	1. [Linked List](src/ds_002_linkedlists/LinkedList.java)
-	2. [Linked List Demo](src/ds_002_linkedlists/LinkedListDemo.java)
-	3. [Doubly Linked List](src/ds_002_linkedlists/DoublyLinkedList.java)
-	4. [Doubly Linked List Demo](src/ds_002_linkedlists/DoublyLinkedListDemo.java)
-	5. [Sorted Linked List](src/ds_002_linkedlists/SortedLinkedList.java)
-	6. [Sorted Linked List Demo](src/ds_002_linkedlists/SortedLinkedListDemo.java)
-	7. [Sorting Items With Sorted Linked List Demo](src/ds_002_linkedlists/SortingItemsWithSortedLinkedListDemo.java)
+	1. [Cell](src/ds_002_linkedlists/Cell.java)
+	2. [Doubly Cell](src/ds_002_linkedlists/DCell.java)
+	3. [Linked List](src/ds_002_linkedlists/LinkedList.java)
+	4. [Linked List Demo](src/ds_002_linkedlists/LinkedListDemo.java)
+	5. [Doubly Linked List](src/ds_002_linkedlists/DoublyLinkedList.java)
+	6. [Doubly Linked List Demo](src/ds_002_linkedlists/DoublyLinkedListDemo.java)
+	7. [Sorted Linked List](src/ds_002_linkedlists/SortedLinkedList.java)
+	8. [Sorted Linked List Demo](src/ds_002_linkedlists/SortedLinkedListDemo.java)
+	9. [Sorting Items With Sorted Linked List Demo](src/ds_002_linkedlists/SortingItemsWithSortedLinkedListDemo.java)
 
 *******
 
