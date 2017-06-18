@@ -2,7 +2,19 @@
 ************************
 
 1. [Intro](src/ds_001_intro)
-	1. [Curve](src/ds_001_intro/Curve.java)
+	1. [Find Primes](src/ds_001_intro/FindPrimes.java)
+	2. [Greatest Common Divisor](src/ds_001_intro/GCD.java)
+	3. [Least Common Multiple](src/ds_001_intro/LCM.java)
+	4. [Prime Factors](src/ds_001_intro/PrimeFactorsDemo.java)
+	5. [Randomization Demo](src/ds_001_intro/RandomizatinDemo.java)
+	6. [Random Pick Demo](src/ds_001_intro/RandomPickDemo.java)
+	7. [Pseudo Number Generator](src/ds_001_intro/PSNG.java)
+	8. [Testing Primes](src/ds_001_intro/TestingPrimes.java)
+	9. [Rectangle Rule Demo](src/ds_001_intro/RectangleRuleAlgoDemo.java)
+	10. [Rectangle Rule Demo 2](src/ds_001_intro/RectangleRuleAlgoDemoV2.java)
+	11. [Trapezoid Rule Demo](src/ds_001_intro/TrapezoidRuleAlgoDemo.java)
+	12. [Trapezoid Rule Demo](src/ds_001_intro/TrapezoidRuleAlgoDemoV2.java)
+	13. [Trapezoid Rule Demo](src/ds_001_intro/TrapezoidRuleAlgoDemoV3.java)
 
 *******
 
