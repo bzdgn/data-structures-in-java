@@ -10,5 +10,5 @@ ToDo's:
 - DS_013 Package: Kruskal's algorithm to be implemented
 
 
-[Intro](/src/ds_001_intro)
+[Intro](src/ds_001_intro)
 [Curve](src/ds_001_intro/Curve.java)
