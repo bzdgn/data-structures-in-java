@@ -47,10 +47,6 @@ public class FloydWarshallAllPairsShortestPathDemo {
 			for(int a = 0; a < numNodes; a++) {
 				for(int b = 0; b < numNodes; b++) {
 					int distanceAB = distances[a][b];
-					if(distanceAB == Integer.MAX_VALUE) {
-						continue;	// no link
-					}
-					
 					int distanceAK = distances[a][k];
 					int distanceKB = distances[k][b];
 					if(distanceAK == Integer.MAX_VALUE || distanceKB == Integer.MAX_VALUE) {
