@@ -30,6 +30,9 @@ public class ShortestPathLabelSettingDemo {
 	 *
 	 *
 	 */
+	
+	private static int count = 0;
+	
 	public static void main(String[] args) {
 		// Nodes
 		SPNode nodeA = new SPNode("A");
@@ -111,23 +114,42 @@ public class ShortestPathLabelSettingDemo {
 		nodeList.add(nodeO);
 		nodeList.add(nodeP);
 		
-		initializeNodeDistances(nodeList);
-		shortestPath(nodeA);
+		handleShortestPath(nodeList, nodeA);
 		
 		printShortestPath(nodeP);
+		
+		System.out.println("Count: " + count);
 	}
 	
 	private static void printShortestPath(SPNode node) {
+		printShortestPathRecursive(node);
+		System.out.print("\n");
+	}
+	
+	private static void printShortestPathRecursive(SPNode node) {
 		if(node == null) {
 			return;
 		}
 		
 		if(node.shortestPathLink != null) {
-			printShortestPath(node.shortestPathLink.fromNode);
+			printShortestPathRecursive(node.shortestPathLink.fromNode);
 			System.out.print("--> ");
 		}
 		
 		System.out.printf("%s ", node);
+	}
+	
+	private static void handleShortestPath(List<SPNode> nodes, SPNode startNode) {
+		initializeNodeDistances(nodes);
+		
+		startNode.distance = 0;
+		List<SPLink> candidateList = new LinkedList<>();
+		// add all links of start node to the candidateList
+		for(SPLink link : startNode.links) {
+			candidateList.add(link);
+		}
+		
+		findShortestPathWithLabelSetting(candidateList);
 	}
 	
 	private static void initializeNodeDistances(List<SPNode> nodes) {
@@ -136,23 +158,12 @@ public class ShortestPathLabelSettingDemo {
 		}
 	}
 	
-	private static void shortestPath(SPNode startNode) {
-		startNode.distance = 0;
-		List<SPLink> candidateList = new LinkedList<>();
-		// add all links of start node to the candidateList
-		for(SPLink link : startNode.links) {
-			candidateList.add(link);
-		}
-		
+	private static void findShortestPathWithLabelSetting(List<SPLink> candidateList) {
 		// while candidateList not empty
 		while(!candidateList.isEmpty()) {
-			printList(candidateList);	//FTODO: debug
-//			// for each link in candidateList, if distance is smaller then infinity, remove
-//			for(SPLink link : candidateList) {
-//				if(link.toNode.distance < Float.MAX_VALUE) {
-//					candidateList.remove(link);
-//				}
-//			}
+			count++;
+			printList(candidateList);	//TODO: debug
+			
 			// for each link in candidateList, if distance is smaller then infinity, remove
 			ListIterator<SPLink> listIter = candidateList.listIterator();
 			while(listIter.hasNext()) {

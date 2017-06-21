@@ -2,7 +2,6 @@ package ds_013_network_algorithms;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class ShortestPathLabelCorrectingDemo {
 
@@ -30,6 +29,8 @@ public class ShortestPathLabelCorrectingDemo {
 	 *
 	 *
 	 */
+	private static int count = 0;
+	
 	public static void main(String[] args) {
 		// Nodes
 		SPNode nodeA = new SPNode("A");
@@ -111,23 +112,42 @@ public class ShortestPathLabelCorrectingDemo {
 		nodeList.add(nodeO);
 		nodeList.add(nodeP);
 		
-		initializeNodeDistances(nodeList);
-		shortestPath(nodeA);
+		handleShortestPath(nodeList, nodeA);
 		
 		printShortestPath(nodeP);
+		
+		System.out.println("Count: " + count);
 	}
 	
 	private static void printShortestPath(SPNode node) {
+		printShortestPathRecursive(node);
+		System.out.print("\n");
+	}
+	
+	private static void printShortestPathRecursive(SPNode node) {
 		if(node == null) {
 			return;
 		}
 		
 		if(node.shortestPathLink != null) {
-			printShortestPath(node.shortestPathLink.fromNode);
+			printShortestPathRecursive(node.shortestPathLink.fromNode);
 			System.out.print("--> ");
 		}
 		
 		System.out.printf("%s ", node);
+	}
+	
+	private static void handleShortestPath(List<SPNode> nodes, SPNode startNode) {
+		initializeNodeDistances(nodes);
+		
+		startNode.distance = 0;
+		List<SPLink> candidateList = new LinkedList<>();
+		// add all links of start node to the candidateList
+		for(SPLink link : startNode.links) {
+			candidateList.add(link);
+		}
+		
+		findShortestPathWithLabelCorrecting(candidateList);
 	}
 	
 	private static void initializeNodeDistances(List<SPNode> nodes) {
@@ -136,50 +156,28 @@ public class ShortestPathLabelCorrectingDemo {
 		}
 	}
 	
-	private static void shortestPath(SPNode startNode) {
-		startNode.distance = 0;
-		List<SPLink> candidateList = new LinkedList<>();
-		// add all links of start node to the candidateList
-		for(SPLink link : startNode.links) {
-			candidateList.add(link);
-		}
-		
+	private static void findShortestPathWithLabelCorrecting(List<SPLink> candidateList) {
 		// while candidateList not empty
 		while(!candidateList.isEmpty()) {
-			printList(candidateList);	//FTODO: debug
-//			// for each link in candidateList, if distance is smaller then infinity, remove
-//			for(SPLink link : candidateList) {
-//				if(link.toNode.distance < Float.MAX_VALUE) {
-//					candidateList.remove(link);
+			count++;
+			printList(candidateList);	//TODO: debug
+			
+			SPLink firstLink = candidateList.get(0);
+			float newDistance = firstLink.fromNode.distance + firstLink.cost;
+			
+			if(newDistance < firstLink.toNode.distance) {
+				firstLink.toNode.shortestPathLink = firstLink;
+				firstLink.toNode.distance = newDistance;
+				
+//				for(SPLink link : firstLink.toNode.links) {
+//					if(!candidateList.contains(link)) {
+//						candidateList.add(link);
+//					}
 //				}
-//			}
-			// for each link in candidateList, if distance is smaller then infinity, remove
-			ListIterator<SPLink> listIter = candidateList.listIterator();
-			while(listIter.hasNext()) {
-				if(listIter.next().toNode.distance < Float.MAX_VALUE) {
-					listIter.remove();
-				}
+				candidateList.addAll(firstLink.toNode.links);		//TODO: check if should only add if not added already?
 			}
 			
-			float smallest = Float.MAX_VALUE;
-			SPLink bestLink = null;
-			for(SPLink link : candidateList) {
-				float temp = link.fromNode.distance + link.cost;
-				if(temp < smallest) {
-					smallest = temp;
-					bestLink = link;
-				}
-			}
-			
-			if(bestLink != null)  {
-				bestLink.toNode.shortestPathLink = bestLink;
-				bestLink.toNode.distance = bestLink.fromNode.distance + bestLink.cost;
-				for(SPLink link : bestLink.toNode.links) {
-					candidateList.add(link);
-				}
-				candidateList.remove(bestLink);
-			}
-
+			candidateList.remove(0);
 		}
 	}
 	
