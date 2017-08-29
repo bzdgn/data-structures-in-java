@@ -1,5 +1,12 @@
 # Data Structures In Java
 
+*******
+## Important Notes;
+This is my data structure implementations that I wrote as I learned them on my DS recap. There is no lamer-stuff here. There are uncompleted code implementations on several packages and if you want to check it out, just go to the "ToDo's" section at the bottom of this readme file.
+
+Levent Divilioglu Summer-2017
+*******
+
 1. [Intro: Package: ds_001_intro](src/ds_001_intro)
 	1. [Find Primes](src/ds_001_intro/FindPrimes.java)
 	2. [Greatest Common Divisor](src/ds_001_intro/GCD.java)
