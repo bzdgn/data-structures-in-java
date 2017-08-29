@@ -148,7 +148,7 @@
 	5. [Shortest Path Label Setting Demo](src/ds_013_network_algorithms/ShortestPathLabelSettingDemo.java)
 	6. [SQueue: Queue Implementation Used In The Package](src/ds_013_network_algorithms/SQueue.java)
 
-13.a. [Network Algorithms - Sample Classes: Package: ds_013_network_algorithms.sampleClasses](src/ds_013_network_algorithms.sampleClasses)
+14. [Network Algorithms - Sample Classes: Package: ds_013_network_algorithms.sampleClasses](src/ds_013_network_algorithms.sampleClasses)
 	1. [Directed Link Example Class](src/ds_013_network_algorithms.sampleClasses/DirectedLinkExampleClass.java)
 	2. [Directed Node Example Class](src/ds_013_network_algorithms.sampleClasses/DirectedNodeExampleClass.java)
 	3. [Enhanced Directed Link Example Class](src/ds_013_network_algorithms.sampleClasses/EnhancedDirectedLinkExampleClass.java)
@@ -157,7 +157,7 @@
 	6. [Undirected Link Example Class](src/ds_013_network_algorithms.sampleClasses/UndirectedLinkExampleClass.java)
 	7. [Undirected Node Example Class](src/ds_013_network_algorithms.sampleClasses/UndirectedNodeExampleClass.java)
 
-XX. [Misc: Package: ds_999_misc](src/ds_999_misc)
+15. [Misc: Package: ds_999_misc](src/ds_999_misc)
 	1. [Check Anagram](src/ds_999_misc/CheckAnagram.java)
 	2. [Find Greatest Sum](src/ds_999_misc/FindGreatestSum.java)
 	3. [Number Permutation](src/ds_999_misc/NumberPermutation.java)
