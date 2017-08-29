@@ -26,6 +26,18 @@
 	8. [Sorted Linked List Demo](src/ds_002_linkedlists/SortedLinkedListDemo.java)
 	9. [Sorting Items With Sorted Linked List Demo](src/ds_002_linkedlists/SortingItemsWithSortedLinkedListDemo.java)
 
+3. [Arrays: Package: ds_003_arrays](src/ds_003_arrays)
+	1. [2D Array With Dynamic Row Number Demo](src/ds_003_arrays/Array2DWithVaryingRowNumbersDemo.java)
+	2. [Dynamic Array](src/ds_003_arrays/DynamicArray.java)
+	3. [Dynamic Array Demo](src/ds_003_arrays/DynamicArrayDemo.java)
+	4. [One Dimensional Array Demo](src/ds_003_arrays/OneDimensionalArrayDemo.java)
+	5. [Print Upper And Lower For 2D Matrix Demo](src/ds_003_arrays/PrintUpperAndLowerFor2DMatrixDemo.java)
+	6. [Sparse Array](src/ds_003_arrays/SparseArray.java)
+	7. [Sparse Array Demo](src/ds_003_arrays/SparseArrayDemo.java)
+	8. [Triangular Array](src/ds_003_arrays/TriangularArray.java)
+	9. [Triangular Array Demo](src/ds_003_arrays/TriangularArrayDemo.java)
+	10. [Word Pattern With 2D Array Demo](src/ds_003_arrays/WordPatternWith2DArrayDemo.java)
+
 *******
 
 ## ToDo's:

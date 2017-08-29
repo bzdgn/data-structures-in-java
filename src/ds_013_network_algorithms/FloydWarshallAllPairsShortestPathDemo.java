@@ -35,6 +35,9 @@ public class FloydWarshallAllPairsShortestPathDemo {
 		printDistancesAndVia(distances, via, labels);
 	}
 	
+	/*
+	 * O(N^3)
+	 */
 	private static void floydWarshallAlgorithm(int[][] distances, Integer[][] via, String[] labels) {
 		int numNodes = distances.length;
 		
